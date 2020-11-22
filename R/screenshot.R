@@ -14,9 +14,10 @@ screenshot <- function(websites, thumbnails) {
     file = thumbnails,
     vwidth = 16 * 75,
     vheight = 9 * 75,
-    cliprect = "viewport"
+    cliprect = "viewport",
+    zoom = 2
   )
-  webshot::resize(thumbnails, "360")
+  webshot::resize(thumbnails, as.character(16 * 50))
   webshot::shrink(thumbnails)
   return(invisible(thumbnails))
 }
