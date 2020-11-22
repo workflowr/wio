@@ -1,0 +1,14 @@
+Package: wio
+Title: Manages data for workflowr.io
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "John",
+           family = "Blischak",
+           role = c("aut", "cre"),
+           email = "jdblischak@gmail.com")
+Description: Obtains metadata from worflowr projects from various sources.
+License: Unlimited
+Encoding: UTF-8
+Imports:
+  webshot
+RoxygenNote: 7.1.1

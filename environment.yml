@@ -1,0 +1,10 @@
+name: wior
+channels:
+- conda-forge
+dependencies:
+- imagemagick
+- phantomjs
+- r-base=4
+- r-devtools
+- r-usethis
+- r-webshot
