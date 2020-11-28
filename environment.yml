@@ -6,5 +6,7 @@ dependencies:
 - phantomjs
 - r-base=4
 - r-devtools
+- r-gh
+- r-jose
 - r-usethis
 - r-webshot
