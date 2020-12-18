@@ -1,6 +1,6 @@
 #' Get list of workflowr projects hosted on GitHub
 #'
-#' export
+#' @export
 getProjectsOnGitHub <- function() {
 
   appId <- Sys.getenv("GH_APP_ID")

@@ -7,5 +7,5 @@
 getProjectsOnGitHub()
 }
 \description{
-export
+Get list of workflowr projects hosted on GitHub
 }
