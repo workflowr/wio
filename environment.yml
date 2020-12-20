@@ -8,5 +8,6 @@ dependencies:
 - r-devtools
 - r-gh
 - r-jose
+- r-rcrossref
 - r-usethis
 - r-webshot
