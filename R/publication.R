@@ -10,17 +10,26 @@ getPublicationMetadata <- function(dois) {
   }
 
   results <- rcrossref::cr_cn(dois, format = "citeproc-json")
+  citations  <- rcrossref::cr_cn(
+    dois,
+    format = "text",
+    style = "national-library-of-medicine-grant-proposals"
+  )
   # The results contain an outer list only if there is more than one doi
   if (length(dois) == 1) {
     results <- list(results)
+    citations <- list(citations)
   }
 
   metadata <- vector("list", length = length(results))
   for (i in seq_along(results)) {
     metadata[[i]][["title"]] <- results[[i]][["title"]]
-    metadata[[i]][["year"]] <- results[[i]]$created$`date-parts`[, 1]
+    metadata[[i]][["year"]] <- results[[i]]$created$`date-parts`[1, 1]
+    metadata[[i]][["month"]] <- results[[i]]$created$`date-parts`[1, 2]
+    metadata[[i]][["day"]] <- results[[i]]$created$`date-parts`[1, 3]
     metadata[[i]][["author"]] <- results[[i]]$author$family[1]
     metadata[[i]][["doi"]] <- results[[i]]$DOI
+    metadata[[i]][["citation"]] <- citations[[i]]
   }
 
   return(metadata)
