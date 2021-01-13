@@ -20,6 +20,8 @@ getPublicationMetadata <- function(dois) {
     results <- list(results)
     citations <- list(citations)
   }
+  # Remove leading "1. " from citations
+  citations <- lapply(citations, function(x) sub("^[0-9]\\.\\s", "", x))
 
   metadata <- vector("list", length = length(results))
   for (i in seq_along(results)) {
