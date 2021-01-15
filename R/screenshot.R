@@ -9,6 +9,10 @@
 #' @return Character vector of filenames of thumbnail images (invisibly)
 #' @export
 screenshot <- function(websites, thumbnails) {
+  if (length(websites) == 0) {
+    return(invisible(character(0)))
+  }
+
   webshot::webshot(
     url = websites,
     file = thumbnails,
