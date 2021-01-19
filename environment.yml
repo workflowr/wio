@@ -1,6 +1,7 @@
 name: wior
 channels:
 - conda-forge
+- jdblischak
 dependencies:
 - imagemagick
 - phantomjs
@@ -9,5 +10,6 @@ dependencies:
 - r-gh
 - r-jose
 - r-rcrossref
+- r-tinier
 - r-usethis
 - r-webshot
