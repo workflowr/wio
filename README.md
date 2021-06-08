@@ -18,4 +18,5 @@ remotes::install_github("jeroen/ghapps", dependencies = FALSE, upgrade = FALSE)
 devtools::install(dependencies = FALSE, upgrade = FALSE)
 ```
 
-Note: ghapps doesn't have a tag yet, so I haven't created a conda binary for it yet.
+Note: ghapps doesn't currently have a tag, so I haven't created a conda binary
+for it yet.
