@@ -7,10 +7,12 @@ dependencies:
 - imagemagick
 - phantomjs
 - r-base=4.0
+- r-crul>=1.2
 - r-devtools
 - r-gh
 - r-jose
 - r-rcrossref
+- r-remotes
 - jdblischak::r-tinier
 - r-usethis
 - r-webshot

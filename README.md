@@ -15,6 +15,9 @@ Install [ghapps](https://github.com/jeroen/ghapps) and wio:
 
 ```R
 remotes::install_github("jeroen/ghapps", dependencies = FALSE, upgrade = FALSE)
+# Have to install dev version of rcrossref to handle update in crossref API
+# related to UTF-8
+remotes::install_github("ropensci/rcrossref", dependencies = FALSE, upgrade = FALSE)
 devtools::install(dependencies = FALSE, upgrade = FALSE)
 ```
 
