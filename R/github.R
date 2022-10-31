@@ -31,6 +31,10 @@ getProjectsOnGitHub <- function() {
       .token = token
     )
     for (repo in repositories$repositories) {
+      if (repo$visibility == "private") {
+        message("Skipping private repo: ", repo$full_name)
+        next
+      }
       projects <- c(projects, list(list(owner = repo$owner$login,
                                         repo = repo$name)))
     }
