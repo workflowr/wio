@@ -35,6 +35,10 @@ getProjectsOnGitHub <- function() {
         message("Skipping private repo: ", repo$full_name)
         next
       }
+      if (!repo$has_pages) {
+        message("Skipping repo with no GitHub Pages: ", repo$full_name)
+        next
+      }
       projects <- c(projects, list(list(owner = repo$owner$login,
                                         repo = repo$name)))
     }
