@@ -25,19 +25,25 @@ getPublicationMetadata <- function(dois) {
 
   metadata <- vector("list", length = length(results))
   for (i in seq_along(results)) {
-    metadata[[i]][["title"]] <- results[[i]][["title"]]
-    # Repair title that contains HTML
-    metadata[[i]][["title"]] <- gsub("&lt;", "<", metadata[[i]][["title"]])
-    metadata[[i]][["title"]] <- gsub("&gt;", ">", metadata[[i]][["title"]])
+    # Example of title with embedded HTML tags
+    # if (results[[i]]$DOI == "10.5194/bg-2021-40") browser()
+    metadata[[i]][["title"]] <- fixHtml(results[[i]][["title"]])
     metadata[[i]][["year"]] <- results[[i]]$created$`date-parts`[1, 1]
     metadata[[i]][["month"]] <- results[[i]]$created$`date-parts`[1, 2]
     metadata[[i]][["day"]] <- results[[i]]$created$`date-parts`[1, 3]
     metadata[[i]][["author"]] <- results[[i]]$author$family[1]
     metadata[[i]][["doi"]] <- results[[i]]$DOI
-    metadata[[i]][["citation"]] <- citations[[i]]
-    metadata[[i]][["citation"]] <- gsub("&lt;", "<", metadata[[i]][["citation"]])
-    metadata[[i]][["citation"]] <- gsub("&gt;", ">", metadata[[i]][["citation"]])
+    metadata[[i]][["citation"]] <- fixHtml(citations[[i]])
   }
 
   return(metadata)
+}
+
+# Repair title that contains HTML
+fixHtml <- function(x) {
+  result <- x
+  result <- gsub("&amp;lt;", "<", result)
+  result <- gsub("&amp;gt;", ">", result)
+  result <- gsub("\\n", " ", result)
+  return(result)
 }
