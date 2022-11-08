@@ -11,15 +11,12 @@ mamba env create --file environment.yml
 conda activate wior
 ```
 
-Install [ghapps](https://github.com/jeroen/ghapps) and wio:
+Install wio (and any other deps not available as conda binaries):
 
 ```R
-remotes::install_github("jeroen/ghapps", dependencies = FALSE, upgrade = FALSE)
 # Have to install dev version of rcrossref to handle update in crossref API
 # related to UTF-8
 remotes::install_github("ropensci/rcrossref", dependencies = FALSE, upgrade = FALSE)
+
 devtools::install(dependencies = FALSE, upgrade = FALSE)
 ```
-
-Note: ghapps doesn't currently have a tag, so I haven't created a conda binary
-for it yet.

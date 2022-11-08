@@ -11,7 +11,7 @@ License: Unlimited
 Encoding: UTF-8
 Imports:
   gh,
-  ghapps,
+  ghapps (>= 1.0.0),
   rcrossref,
   tinieR,
   webshot,

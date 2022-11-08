@@ -6,10 +6,11 @@ channels:
 dependencies:
 - imagemagick
 - phantomjs
-- r-base=4.0
+- r-base=4.1
 - r-crul>=1.2
 - r-devtools
 - r-gh
+- r-ghapps
 - r-jose
 - r-rcrossref
 - r-remotes

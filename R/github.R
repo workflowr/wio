@@ -15,16 +15,13 @@ getProjectsOnGitHub <- function() {
     stop("The key file specified by GH_APP_KEY does not exist: %s",
          appKey)
   }
-  installations <- ghapps::gh_app_installation_list(
-    app_id = appId,
-    app_key = appKey
-  )
+  jwt <- ghapps::gh_app_jwt(app_id = appId, app_key = appKey)
+  installations <- ghapps::gh_app_installation_list(jwt)
   projects <- list()
   for (install in installations) {
     token <- ghapps::gh_app_token(
       installation = install$account$login,
-      app_id = appId,
-      app_key = appKey
+      jwt = jwt
     )
     repositories <- gh::gh(
       "/installation/repositories",
