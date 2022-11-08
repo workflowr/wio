@@ -1,3 +1,7 @@
+# 0.0.0.9003
+
+* Migrated to ghapps 1.0.0 (which contained breaking API changes)
+
 # 0.0.0.9002
 
 * Skip private repositories (likely caused by a user installing the GitHub App
