@@ -12,7 +12,7 @@ dependencies:
 - r-gh
 - r-ghapps
 - r-jose
-- r-rcrossref
+- r-rcrossref>=1.2
 - r-remotes
 - jdblischak::r-tinier
 - r-usethis

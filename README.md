@@ -11,12 +11,8 @@ mamba env create --file environment.yml
 conda activate wior
 ```
 
-Install wio (and any other deps not available as conda binaries):
+Install wio:
 
 ```R
-# Have to install dev version of rcrossref to handle update in crossref API
-# related to UTF-8
-remotes::install_github("ropensci/rcrossref", dependencies = FALSE, upgrade = FALSE)
-
 devtools::install(dependencies = FALSE, upgrade = FALSE)
 ```

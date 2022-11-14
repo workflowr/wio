@@ -12,7 +12,7 @@ Encoding: UTF-8
 Imports:
   gh,
   ghapps (>= 1.0.0),
-  rcrossref,
+  rcrossref (>= 1.2.0),
   tinieR,
   webshot,
   yaml
