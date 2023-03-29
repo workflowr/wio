@@ -1,6 +1,6 @@
 Package: wio
 Title: Manages data for workflowr.io
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R:
   person(given = "John",
     family = "Blischak",
@@ -14,7 +14,7 @@ Imports:
   ghapps (>= 1.0.0),
   rcrossref (>= 1.2.0),
   tinieR,
-  webshot,
+  webshot2,
   yaml
 RoxygenNote: 7.1.1
 Remotes:

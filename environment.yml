@@ -17,3 +17,6 @@ dependencies:
 - jdblischak::r-tinier
 - r-usethis
 - r-webshot
+# for webshot2
+- r-asioheaders
+- r-websocket

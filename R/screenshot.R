@@ -15,7 +15,7 @@ screenshot <- function(websites, thumbnails, useTinyPng = TRUE) {
     return(invisible(character(0)))
   }
 
-  webshot::webshot(
+  webshot2::webshot(
     url = websites,
     file = thumbnails,
     vwidth = 16 * 75,
@@ -23,12 +23,12 @@ screenshot <- function(websites, thumbnails, useTinyPng = TRUE) {
     cliprect = "viewport",
     zoom = 2
   )
-  webshot::resize(thumbnails, as.character(16 * 50))
+  webshot2::resize(thumbnails, as.character(16 * 50))
   shrinkImage(thumbnails, useTinyPng = useTinyPng)
   return(invisible(thumbnails))
 }
 
-# Uses TinyPNG API or optipng (via webshot::shrink) to reduce file size
+# Uses TinyPNG API or optipng (via webshot2::shrink) to reduce file size
 shrinkImage <- function(image, useTinyPng = TRUE) {
   if (useTinyPng && Sys.getenv("TINY_API") != "") {
     # tinify() is not vectorized
@@ -46,5 +46,5 @@ shrinkImage <- function(image, useTinyPng = TRUE) {
   if (useTinyPng)
     warning("Unable to use TinyPNG API. Requires env var TINY_API")
 
-  webshot::shrink(image)
+  webshot2::shrink(image)
 }

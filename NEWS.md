@@ -1,3 +1,8 @@
+# 0.0.0.9004
+
+* Migrated from webshot to webshot2 (in order to migrate from Ubuntu 18.04 to
+  22.04)
+
 # 0.0.0.9003
 
 * Migrated to ghapps 1.0.0 (which contained breaking API changes)
