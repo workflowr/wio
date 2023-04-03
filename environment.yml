@@ -7,12 +7,7 @@ dependencies:
 - imagemagick
 - r-base=4.1
 - r-crul>=1.2
-- r-devtools
-- r-gh
-- r-ghapps
-- r-jose
+- r-ghapps>=1
 - r-rcrossref>=1.2
-- r-remotes
 - jdblischak::r-tinier
-- r-usethis
 - r-webshot2

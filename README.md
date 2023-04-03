@@ -13,6 +13,6 @@ conda activate wior
 
 Install wio:
 
-```R
-devtools::install(dependencies = FALSE, upgrade = FALSE)
+```sh
+R CMD INSTALL --build .
 ```
