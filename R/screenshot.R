@@ -21,6 +21,7 @@ screenshot <- function(websites, thumbnails, useTinyPng = TRUE) {
     vwidth = 16 * 75,
     vheight = 9 * 75,
     cliprect = "viewport",
+    delay = 1,
     zoom = 2
   )
   webshot2::resize(thumbnails, as.character(16 * 50))
