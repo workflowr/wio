@@ -14,6 +14,5 @@ conda activate wior
 Install wio:
 
 ```R
-devtools::install_github("rstudio/webshot2", upgrade = FALSE)
 devtools::install(dependencies = FALSE, upgrade = FALSE)
 ```

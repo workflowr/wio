@@ -5,7 +5,6 @@ channels:
 - nodefaults
 dependencies:
 - imagemagick
-- phantomjs
 - r-base=4.1
 - r-crul>=1.2
 - r-devtools
@@ -16,7 +15,4 @@ dependencies:
 - r-remotes
 - jdblischak::r-tinier
 - r-usethis
-- r-webshot
-# for webshot2
-- r-asioheaders
-- r-websocket
+- r-webshot2
