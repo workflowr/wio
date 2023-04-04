@@ -12,8 +12,8 @@ getProjectsOnGitHub <- function() {
     stop("Unable to find environment variable GH_APP_KEY")
   }
   if (!file.exists(appKey)) {
-    stop("The key file specified by GH_APP_KEY does not exist: %s",
-         appKey)
+    warning("GH_APP_KEY does not point to an existing file.\n",
+            "Thus the string is assumed to be the key itself.")
   }
   jwt <- ghapps::gh_app_jwt(app_id = appId, app_key = appKey)
   installations <- ghapps::gh_app_installation_list(jwt)

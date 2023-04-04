@@ -1,3 +1,8 @@
+# 0.0.0.9006
+
+* `GH_APP_KEY` can also be a string of the key itself (instead of a path to a
+  file that contains the key)
+
 # 0.0.0.9004
 
 * Migrated from webshot to webshot2 (in order to migrate from Ubuntu 18.04 to
